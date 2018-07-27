@@ -1,0 +1,47 @@
+extends ../main/base
+
+block variables
+	-let title = 'Home';
+
+block content
+	.home
+		.home__inner.inner
+			.home__start.start
+				.start__left
+					+headline({size: 'large'}).start__headline Станьте еффективнее с Intellecto
+					+text({align: 'left', line: true}).start__text.
+						Разнообразие, регулярность, последовательное усложнение, комплексное воздействие и планомерная поэтапность — научный путь развития мыслительной деятельности и креативности.
+					.start__buttons
+						+button({size: 'large', color: 'green'}).start__button начать тренировку
+						+button.start__button узнать больше
+				.start__right
+					.start__image
+						.start__image--bg
+						img.start__image--image(src='/images/start.png')
+			+quote.home__quote.
+				Наш мозг постоянно испытывает перегрузку, которая приводит к сбоям в работе когнитивных функций
+			+text.home__text.
+				От перенапряжения на работе сложно запомнить самое важное, постоянное переключение между различными делами не даёт сконцентрироваться, а голова к концу дня так переполнена различными заботами, что думать становиться совсем невозможно…
+			.home__problems
+				include ../includes/home/problems
+			.home__benefits
+				include ../includes/home/benefits
+		.mainquote
+			.mainquote__icon “
+			.mainquote__text.
+				Если бы люди знали, сколько благоприятных возможностей рассыпано вокруг и сколько чудесных даров таится в них самих, они навсегда бы оставили уныние и лень
+			.mainquote__line
+			.mainquote__author АЛЬ БИРУНИ
+			.mainquote__about один из самых энциклопедически образованных ученых в мире
+			.mainquote__bg
+				.mainquote__bg--ball
+				.mainquote__bg--ball
+				.mainquote__bg--ball
+				img.mainquote__bg--chat(src='/images/chat.png')
+		.home__inner.inner
+			.home__bottom.bottom
+				+headline({size: 'small', align: 'center'}).bottom__text.
+					Готовы вывести свои способности на новый уровень?  Присоединяйтесь к нашему проекту и получите доступ к ежедневным индивидуальным тренировкам для достижения ваших целей.
+				.bottom__buttons
+					+button({size: 'large', color: 'green'}).bottom__button начать тренировку
+					+button({size: 'large'}).bottom__button комплексные программы

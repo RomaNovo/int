@@ -1,0 +1,42 @@
+.headline
+	@include flex(column, flex-start, flex-start, nowrap)
+	&_
+		&left
+			align-items: flex-start
+		&center
+			align-items: center
+	&__
+		&sub
+			color: $green
+			font-family: $regular
+			font-size: 14px
+			font-weight: 700
+			line-height: 24px
+			margin-bottom: 20px
+		&content
+			color: $text
+			font-family: $regular
+			font-weight: 700
+			&_
+				&left
+					text-align: left
+				&center
+					text-align: center
+				&medium
+					font-size: 36px
+				&large
+					font-size: 48px
+				&small
+					font-size: 24px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

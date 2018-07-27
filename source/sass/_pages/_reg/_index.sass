@@ -1,0 +1,236 @@
+.reg
+	&__
+		&skill-blocks
+			max-width: 1250px
+			margin: 150px auto 0
+		&and-reg
+			display: none
+
+			&_active
+				display: block	
+		&submit
+			margin: 60px auto 0
+			opacity: .5
+			cursor: not-allowed
+		&slide
+			width: 124px
+			height: 10px
+			margin: 60px auto 0
+			display: flex
+			align-items: center
+
+.skill-blocks
+	font-family: $regular
+	display: none 
+	&_active
+		display: block
+	&__
+		&headline
+			font-weight: bold
+		&title
+			padding-top: 5px
+			padding-bottom: 20px
+			text-align: center
+			font-size: 45px
+			font-weight: 700		
+			&_
+				&blue
+					color: #679af4
+				&green
+					color: #17ab04
+				&orange
+					color: #f7a648
+		&text
+			font-size: 16px
+			font-weight: 400
+			color: #314d96
+			text-align: center
+		&elm
+			margin-top: 50px
+		
+		&submit
+			margin: 65px auto 10px
+		
+.elm	
+	&__
+		&title
+			text-align: center
+			font-size: 36px
+			font-weight: 700
+			color: #314d96
+		&box
+			margin-top: 105px
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap			
+		&item
+			margin-left: 20px
+			flex: 1 0 auto
+			width: 260px
+			max-width: 260px
+			min-height: 140px
+			position: relative
+			background-color: #fff
+			border-radius: 10px
+			box-shadow: 0 10px 30px rgba(200, 235, 253, 0.6)
+			&--
+				&img
+					width: 71px
+					height: 71px
+					display: block
+					position: absolute
+					top: 0
+					left: 50%
+					transform: translate(-50%, -65%)
+						
+				&text
+					margin: 0 auto
+					padding-top: 45px
+					max-width: 240px
+					text-align: center
+					margin: 0 auto
+					color: #587696
+					font-size: 18px
+					font-weight: 400 
+				&check
+					position: absolute
+					bottom: 0
+					left: 50%
+					width: 20px
+					height: 20px
+					border-radius: 4px
+					transform: translate(-50%,50%)
+					background-color: #fff
+					cursor: pointer
+					outline: none
+
+					&_blue
+						border: 2px solid #679af4
+					&_green
+						border: 2px solid #17ab04
+					&_orange
+						border: 2px solid #f7a648
+				&checked
+					display: block
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%)
+					opacity: 0
+					outline: none
+					
+					&_active
+						opacity: 1
+.slide
+	display: flex
+	justify-content: space-between
+	width: 100%
+	&__
+		&item
+			width: 10px
+			height: 10px
+			border: 1px solid #bfbfbf
+			border-radius: 50%
+			position: relative
+			cursor: pointer
+		&inner
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			opacity: 0		
+			&_
+				&active
+					opacity: 1
+				&blue
+					background-color: #608af4
+				&green
+					background-color: #1ea22e
+				&orange
+					background-color: #f79f48
+
+.and-reg
+	font-family: $regular
+	&__
+		&headline
+			margin-top: 200px
+		&title
+
+		&text
+			padding-top: 10px
+			padding-bottom: 20px
+			max-width: 228px
+			text-align: center
+			margin: 0 auto
+			color: #587696
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+		&status
+			max-width: 430px
+			margin: 0 auto
+		&bottom
+			max-width: 440px
+			margin: 0 auto
+		&checkbox
+			margin: 0 auto
+		&link
+			color: #369dfc
+			
+.form-reg
+	&__
+		&wrp
+			max-width: 360px
+			margin: 0 auto		
+		&field
+			position: relative
+			&:not(:last-child)
+				margin-bottom: 25px
+		&img
+			position: absolute
+			left: 15px
+			top: 50%
+			transform: translateY(-50%)
+
+		&input	
+			width: 100%
+			padding: 15px 0  15px 60px
+			border: 1px solid transparent
+			border-radius: 25px
+			box-shadow: 0 5px 30px rgba(200, 235, 253, 0.4)
+
+			&_novalid
+				border: 1px solid red
+
+			&::placeholder
+				color: #314d96
+				font-size: 16px
+				font-weight: 400
+				line-height: 24px
+				opacity: 0.5
+		&text
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			color: #314d96
+			text-align: center
+		&social 
+			margin: 20px auto  20px
+			width: 100px
+			display: flex
+			justify-content: space-between
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

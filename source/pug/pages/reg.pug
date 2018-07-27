@@ -1,0 +1,92 @@
+extends ../main/base
+
+block variables
+	-let title = 'Reg';
+
+mixin item( text,imageName,className,src )
+	.elm__item
+		img(src=imageName, alt='' ,title='').elm__item--img
+		.elm__item--text()=text
+		div(class=className).elm__item--check
+			img.elm__item--checked(src= `images/${src}.png`)
+
+block content
+	.reg
+		.reg__inner.inner
+			.reg__skill-blocks 
+				.skill-blocks.skill-blocks_active.skill-blocks1(data-num = '0')
+					+headline({size: 'medium', align: 'center'}).skill-blocks__headline Intellecto повысит
+					.skill-blocks__title.skill-blocks__title_blue Ваше внимание
+					.skill-blocks__text (Выберите позиции для улучшения)
+					.skill-blocks__elm
+						.elm
+							.elm__title Я хочу:
+							.elm__box
+								+item('Перестать отвлекаться на внешние помехи и раздражители','images/i-blue1.png','elm__item--check_blue', 'check')
+								+item('Быстро переключаться между разными видами деятельности','images/i-blue2.png','elm__item--check_blue', 'check')
+								+item('Эффективно делать несколько разных дел одновременно','images/i-blue3.png','elm__item--check_blue', 'check')
+								+item('Легко концентрироваться на задачах и работать продуктивнее','images/i-blue4.png','elm__item--check_blue', 'check')
+				.skill-blocks.skill-blocks2(data-num = '1')
+					+headline({size: 'medium', align: 'center'}).skill-blocks__headline Intellecto повысит
+					.skill-blocks__title.skill-blocks__title_green Ваше внимание
+					.skill-blocks__text (Выберите позиции для улучшения)
+					.skill-blocks__elm
+						.elm
+							.elm__title Я хочу:
+							.elm__box
+								+item('Перестать отвлекаться на внешние помехи и раздражители','images/i-green1.png','elm__item--check_green elm__item--check', 'check')
+								+item('Быстро переключаться между разными видами деятельности','images/i-green2.png','elm__item--check_green elm__item--check', 'check')
+								+item('Эффективно делать несколько разных дел одновременно','images/i-green3.png','elm__item--check_green elm__item--check', 'check')
+								+item('Легко концентрироваться на задачах и работать продуктивнее' ,'images/i-green4.png','elm__item--check_green elm__item--check', 'check')
+				.skill-blocks.skill-blocks3(data-num = '2')
+					+headline({size: 'medium', align: 'center'}).skill-blocks__headline Intellecto повысит
+					.skill-blocks__title.skill-blocks__title_orange Ваше внимание
+					.skill-blocks__text (Выберите позиции для улучшения)
+					.skill-blocks__elm
+						.elm
+							.elm__title Я хочу:
+							.elm__box
+								+item('Перестать отвлекаться на внешние помехи и раздражители','images/i-org1.png','elm__item--check_orange', 'check')
+								+item('Быстро переключаться между разными видами деятельности','images/i-org2.png','elm__item--check_orange', 'check')
+								+item('Эффективно делать несколько разных дел одновременно','images/i-org3.png','elm__item--check_orange', 'check')
+								+item('Легко концентрироваться на задачах и работать продуктивнее' ,'images/i-org4.png','elm__item--check_orange', 'check')
+			.reg__and-reg
+				.and-reg
+					+headline({size: 'medium', align: 'center'}).and-reg__headline Всё готово!
+					.and-reg__text Осталось зарегистрироваться и пройти тестированиеllll
+					.and-reg__form-reg
+						.form.form-reg
+							.form-reg__wrp
+								.form-reg__field
+									input(type='email' data-type="email" class='form-reg__input' placeholder='Напишите Ваш лучший e-mail')
+									img(src='images/envelope.png' class='form-reg__img' alt="")
+								.form-reg__field
+									input(type='password' data-type="text" class='form-reg__input' placeholder='Придумайте пароль')
+									img(src='images/pass.png' class='form-reg__img' alt="")
+								.form-reg__field
+									input(type='password'  data-type="text" class='form-reg__input' placeholder='Ещё раз пароль (вдруг, что-то забыли)')
+									img(src='images/pass.png' class='form-reg__img' alt="")
+								.form-reg__text или войти с помощью социальных сетей
+								.form-reg__social
+									img(src='images/fb.png')
+									img(src='images/google.png')
+									
+					.and-reg__bottom
+						+checkbox.and-reg__checkbox Подтверждаю ознакомление и согласие с условиями #[a(href="#" class="and-reg__link") Лицензионного соглашения] и #[a(href="#" class="and-reg__link") Политикой обработки перснальных данных] 
+			.reg__slide
+				.slide
+					.slide__item
+						.slide__inner.slide__inner_blue.slide__inner_active
+					.slide__item
+						.slide__inner.slide__inner_green
+					.slide__item
+						.slide__inner.slide__inner_orange
+					.slide__item
+						.slide__inner.slide__inner_green
+
+			+button({size: 'large', color: 'green'}).reg__submit Продолжить
+
+
+
+
+

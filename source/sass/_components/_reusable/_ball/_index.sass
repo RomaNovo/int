@@ -1,0 +1,35 @@
+.ball
+	border-radius: 50%
+	display: block
+	&_
+		&green
+			background-image: linear-gradient(30deg, #abf5d6 0%, #f4fdf3 100%)
+		&blue
+			background-image: linear-gradient(45deg, #adf0f6 28%, rgba(173, 240, 246, 0.85) 39%, rgba(173, 240, 246, 0) 100%)
+		&xs
+			width: 42px
+			height: 42px
+		&s
+			width: 45px
+			height: 45px
+		&m
+			width: 65px
+			height: 65px
+		&l
+			width: 119px
+			height: 119px
+		&xl
+			width: 418px
+			height: 418px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

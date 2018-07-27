@@ -1,0 +1,4 @@
+mixin text(obj={})
+	-let props = Object.assign({align: 'center', line: false}, obj)
+	.text(class=`text_${props.align} ${props.line ? 'text_line' : ''}`)&attributes(attributes)
+		block

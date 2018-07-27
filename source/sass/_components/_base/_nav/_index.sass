@@ -1,0 +1,124 @@
+.nav
+	@include flex(row, center, center, nowrap)
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 9999
+	padding: 24px 0
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(white, 0.5)
+		z-index: -1
+	&__
+		&inner
+			@include flex(row, space-between, center, nowrap)
+		&mobile
+			@include flex(row, flex-start, center, nowrap)
+			display: none
+			width: 350px
+			&--
+				&text
+					color: $text
+					font-family: $regular
+					font-size: 14px
+					font-weight: 700
+					line-height: 24px
+					text-transform: uppercase
+					margin-left: 20px
+		&menu, &burger, &logo
+			transition: all .6s
+			will-change: transform, opacity
+		&content
+			@include flex(row, flex-end, center, nowrap)
+		&links
+			@include flex(row, flex-end, center, nowrap)
+		&link
+			@include flex(column, flex-start, flex-start, nowrap)
+			padding: 10px 0
+			position: relative
+			&:not(:first-child)
+				margin-left: 50px
+			&:hover
+				.nav__link
+					&--
+						&children
+							transform: translate(-50%, 0)
+							opacity: 1
+							max-height: 300px
+							padding: 10px
+							transition: all .6s, padding 0ms
+			&_
+				&children
+					.nav__link--
+						&link
+							&::after
+								content: ''
+								width: 10px
+								height: 5px
+								background-color: #bdc7d2
+								position: absolute
+								top: 50%
+								left: calc(100% + 10px)
+								transform: translateY(-50%)
+								// clip-path: polygon(0 5%, 5% 0, 50% 95%, 95% 0, 0 5%, 50% 100%, 0 5%)
+								clip-path: polygon(10% 0, 50% 84%, 90% 0, 100% 10%, 50% 100%, 0 10%)
+			&--
+				&children
+					@include flex(column, flex-start, center, nowrap)
+					position: absolute
+					top: 100%
+					left: 50%
+					min-width: 60px
+					width: 100%
+					box-shadow: 0 5px 20px rgba(189, 199, 210, 0.4)
+					background-color: #ffffff
+					padding: 10px
+					border-radius: 4px
+					transform: translate(-50%, 50px)
+					opacity: 0
+					transition: all .6s, padding 0ms .6s
+					will-change: transform, opacity, max-height, padding
+					max-height: 0px
+					overflow: hidden
+					padding: 0
+					&_
+						&left
+							align-items: flex-start
+				&child
+					color: $text
+					font-family: $regular
+					font-size: 14px
+					font-weight: 700
+					text-transform: uppercase
+					transition: all .3s
+					&:not(:last-child)
+						margin-bottom: 10px
+					&:hover
+						color: $green
+		&login
+			margin-left: 50px
+			&_
+				&mobile
+					display: none
+					transition: all .6s
+					will-change: transform, opacity
+		&devs
+			display: none
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

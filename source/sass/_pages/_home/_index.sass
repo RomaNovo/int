@@ -1,0 +1,160 @@
+.home
+	&__
+		&inner
+			@include flex(column, flex-start, center, nowrap)
+		&quote
+			max-width: 680px
+		&text
+			max-width: 680px
+			margin: 50px 0 80px
+			padding-bottom: 45px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				width: 65px
+				height: 2px
+				background-color: $green
+		&problems, &benefits
+			width: 100%
+		&benefits
+			margin: 185px 0
+
+.problems
+	@include flex(column, flex-start, center, nowrap)
+	position: relative
+	width: 100%
+	&__
+		&headline
+			max-width: 600px
+			text-align: center
+			color: $text
+			font-family: $regular
+			font-size: 24px
+			font-weight: 700
+			line-height: 36px
+			&_
+				&green
+					color: $green
+		&switch
+			margin: 50px 0 40px
+		&list
+			@include flex(column, flex-start, center, nowrap)
+			margin-bottom: 60px
+		&item
+			@include flex(column, flex-start, center, nowrap)
+			text-align: center
+			color: #587696
+			font-family: $regular
+			font-size: 16px
+			font-weight: 400
+			// line-height: 24px
+			margin-bottom: 30px
+			position: relative
+			width: 300px
+			height: 65px
+			&::before
+				@include flex(row, center, center, nowrap)
+				content: url('/images/check.png')
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				background-color: rgba($green, 0.2)
+				margin-bottom: 10px
+			&--
+				&text
+					position: absolute
+					top: 40px
+					left: 50%
+					width: 100%
+					transition: all .2s
+					&:nth-child(1)
+						transform: translateX(-50%)
+						opacity: 1
+						transition-delay: .2s
+					&:nth-child(2)
+						transform: translateX(-50%) rotate3d(1,0,0,90deg)
+						opacity: 0
+			&.active
+				.problems__item--
+					&text
+						&:nth-child(1)
+							transform: translateX(-50%) rotate3d(1,0,0,-90deg)
+							opacity: 0
+							transition-delay: 0ms
+						&:nth-child(2)
+							transform: translateX(-50%)
+							opacity: 1
+							transition-delay: .2s
+		&buttons
+			@include flex(row, center, center, nowrap)
+			margin-top: 45px
+		&button
+			&:first-child
+				margin-right: 30px
+		&photos
+			@include flex(row, flex-start, center, nowrap)
+			position: absolute
+			top: 0
+			&_
+				&left
+					right: calc(50% + 180px)
+				&right
+					left: calc(50% + 180px)
+					flex-direction: row-reverse
+		&column
+			@include flex(column, center, center, nowrap)
+			&:nth-child(2n)
+				padding-bottom: 40px
+		&photo
+			width: 95px
+			height: 135px
+			object-fit: cover
+			border-radius: 5px
+			margin: 5px
+
+.benefits
+	@include flex(column, flex-start, center, nowrap)
+	width: 100%
+	max-width: 930px
+	margin: 0 auto
+	&__
+		&line
+			@include flex(row, space-between, stretch, nowrap)
+			width: 100%
+			&:nth-child(2n)
+				flex-direction: row-reverse
+			&:not(:last-child)
+				margin-bottom: 150px
+		&cell
+			@include flex(column, center, flex-start, nowrap)
+			width: 50%
+			&_
+				&end
+					align-items: flex-end
+		&text
+			margin: 48px 0 36px
+		&calendar
+			width: 70%
+		&button
+			&_
+				&mobile
+					display: none
+					margin-top: 120px
+		&calendar
+			max-width: 300px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

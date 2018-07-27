@@ -1,0 +1,7 @@
+mixin headline(obj={})
+	-let props = Object.assign({sub: false, align: 'left', size: 'medium'}, obj);
+	.headline(class=`headline_${props.align}`)&attributes(attributes)
+		if props.sub
+			.headline__sub= props.sub
+		.headline__content(class=`headline__content_${props.align} headline__content_${props.size}`)
+			block

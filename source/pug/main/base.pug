@@ -1,0 +1,18 @@
+include ../config/config
+include ../mixins/index
+include ../functions/index
+
+block variables
+
+doctype html
+html(lang=lang)
+	head
+		include ../includes/base/head
+	body
+		.content
+			unless nobg
+				include ../includes/main/background
+			include ../includes/main/nav
+			block content
+			include ../includes/main/footer
+		include ../includes/main/modals

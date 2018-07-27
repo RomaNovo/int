@@ -1,0 +1,92 @@
+.news	
+	margin-top: 13rem
+	&__	
+		&inner
+			@include flex (column, flex-wrap, center, nowrap)
+		&start 
+			width: 100%
+			
+		
+.news 
+	.headline__content
+		font-weight: bold
+		color: $green	
+	&__
+		&item
+			@include flex(row,flex-start,start,nowrap)
+			width: 100%
+			margin: 16rem 0
+			&:nth-child(odd)
+				@include flex(row-reverse,flex-start, start, nowrap)
+				.news__item--
+					
+					&left
+						text-align: right
+						.headline__content
+							margin-right: 0
+							margin-left: auto
+						.text	
+							text-align: right
+						.text_line
+							border-left: unset
+							padding-right:  0
+							border-right: 2px solid #38d082
+							padding-right: 38px
+							text-align: right	
+						.button
+							margin-left: auto	
+			&--
+				&left	
+					width: 38%
+					text-align: left
+					.headline__content
+						margin-left: 0
+					.text
+						margin: 25px 0
+				&right
+					@include flex(column, flex-wrap , center,nowrap)
+					width: 62%	
+					height: 100%	
+				&date	
+					font-size: 16px
+					font-weight: 400
+					color: #587696
+					margin-bottom: 1rem
+					
+				&button 
+					.button
+						width: 175px
+						height: 50px	
+						.button__text
+							text-transform: unset
+				&image 
+					img
+						border: 12px solid #ffffff
+						border-radius: 50%
+						width: 375px
+						height: 375px
+			.button
+				margin-left: 0
+			.text_line
+				border-left: unset
+				padding-left: 0
+				border-left: 2px solid #38d082
+				padding-left: 38px
+				text-align: left
+			.headline__content
+				color: $text
+				font-weight: 700
+			&:nth-child(1n)
+				margin-top: 1rem
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

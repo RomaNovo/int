@@ -1,0 +1,25 @@
+extends ../main/base
+
+block variables
+	-let title = 'Login';
+
+block content
+	.login
+		+headline({align: 'center', size: 'medium'}).login__headline Здравствуйте!
+		.login__subheadline Рады Вас видеть снова!
+		.login__text.
+			Входите,<br/>продолжим заниматься!
+		.login__form
+			+input({icon: '/images/envelope.png'}).login__input
+			+input({icon: '/images/lock.png', attrs: {type: 'password'}}).login__input
+			.login__form--bottom
+				+checkbox.login__checkbox Запомнить меня.
+				a(href='#' data-modal="recovery").login__link Забыли пароль?
+			+button({color: 'green', size: 'small'}) ВОЙТИ
+		.login__text.
+			Первый раз у нас? <a href='#' class="login__link">Зарегистрируйтесь</a>
+			и начните тренироваться прямо сейчас,
+			или войдите с помощью социальных сетей.
+		.login__social
+			a(href='#').login__social--button: img(src='/images/fb.png')
+			a(href='#').login__social--button: img(src='/images/gp.png')

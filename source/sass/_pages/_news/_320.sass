@@ -1,0 +1,21 @@
+.news 
+    margin-top: 6rem
+    .news__item:nth-child(1n)
+        margin-top: 1rem
+        .text_line
+            padding-right: 17px
+    .news__item
+        .text_line
+                padding-left: 17px
+        margin: 2rem 0
+        @include flex(column-reverse,flex-start,start,nowrap)
+        .text_line
+            padding-left: 17px
+        &-- 
+            &image img  
+                width: 200px
+                height: 200px
+            &right  
+                width: 100%
+            &left
+                width: 100%     

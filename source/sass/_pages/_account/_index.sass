@@ -1,0 +1,157 @@
+/* YOUR STYLES ARE STARTING HERE */
+.account
+	&__
+		&inner	
+			@include flex (row, center, center, nowrap)
+			height: 100vh
+			
+		&block	
+			&--
+				&left
+					width: 60%	
+				&right	
+					width: 40%
+		&name	
+			@include flex (row,flex-start,center,nowrap)
+			margin-bottom: .5rem
+			
+			.headline__content
+				position: relative
+		&settings
+			position: absolute
+			top: -20px
+			right: -30px
+			cursor: pointer
+		&status
+			.headline__sub
+				font-weight: 400
+				margin-bottom: 1rem	
+		&info	
+			@include flex (column,flex-start,center,nowrap)
+			width: 50%	
+			font-family: $regular
+			border-left: 2px solid #38d082
+			padding-left: 13px
+			margin-bottom: 5rem
+			.column
+				@include flex (row,space-between,center,nowrap)
+				width: 100%
+				
+			.name
+				color: $text
+				font-size: 13px
+				font-weight: 700
+				line-height: 22px	
+				text-align: left
+			.value	
+				width: 60%
+				text-align: left
+				color: $green
+				font-weight: 400
+				font-size: 15px
+		&balance
+			@include flex (row,flex-start,center,nowrap)
+			margin-bottom: 2rem
+			.name
+				font-family: $regular
+				font-weight: 700
+				font-size: 24px
+				color: $text
+			.value
+				color: $green
+				font-size: 24px
+				font-weight: 700
+				margin-left: 1rem
+		&photo
+			position: relative
+			img
+				width: 369px
+				height: 372px
+				border: 12px solid #ffffff
+				border-radius: 50%
+			.level
+				@include flex(column,center,center,nowrap)
+				position: absolute
+				bottom: 0
+				left: 0
+				text-align: center
+				width: 119px
+				height: 119px
+				background: #ffffff
+				box-shadow: 0 10px 30px rgba(200, 235, 253, 0.8)
+				border-radius: 50%
+				.value
+					font-size: 52px
+					color: $text
+					font-weight: 700
+					font-family: $regular
+				.name
+					color: $green
+					font-family: $regular
+					font-size: 13px
+					font-weight: 400
+					line-height: 22px
+		&gameinfo
+			@include flex (column,flex-start,left,nowrap)
+			margin-top: 3rem
+			.neuro
+				margin-bottom: .5rem
+				.value
+					display: inline-block
+					color: $text
+					font-family: $regular
+					font-size: 14px
+					font-weight: 700
+					line-height: 24px
+				.name
+					display: inline-block
+					color: $green
+					font-family: $regular
+					font-size: 14px
+					font-weight: 400
+					line-height: 24px
+			.progress__wrap
+				@include flex(column,center,left,nowrap)
+				width: 217px
+				height: 7px
+				position: relative
+				margin-bottom: .5rem
+				.progress
+					height: 5px
+					border-radius: 19px
+					background-color: #c7c7c7
+					width: 100%
+					position: absolute
+					z-index: 20
+					transition: all .5s
+				.value
+					width: 60%
+					transition: all .5s
+					z-index: 30
+					height: 7px
+					border-radius: 19px
+					background-image: linear-gradient(to right, #3ac2d6 0%, #5075fb 100%)
+			.text
+				width: 30%
+				color: #587696
+				font-family: $regular
+				font-size: 14px
+				font-weight: 400
+				line-height: 18px
+			
+					
+
+
+/* AND END HERE */
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

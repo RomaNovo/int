@@ -1,0 +1,44 @@
+.start
+	@include flex(row, space-between, center, nowrap)
+	height: 100vh
+	width: 100%		
+	&__
+		&left
+			width: 50%
+		&text
+			margin: 40px 0 55px
+			max-width: 500px
+		&buttons
+			@include flex(row, flex-start, center, nowrap)
+		&button
+			&:first-child
+				margin-right: 30px
+		&right
+			width: 50%
+			@include flex(row, center, center, nowrap)
+		&image
+			position: relative
+			&--
+				&bg
+					width: 690px
+					height: 690px
+					border-radius: 50%
+					background-color: #5bc5ff
+					background-image: linear-gradient(to top, #5173fb 0%, #24b9fc 100%)
+				&image
+					position: absolute
+					bottom: -1px
+					left: 50%
+					transform: translateX(-245px)
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

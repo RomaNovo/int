@@ -1,0 +1,27 @@
+nav.nav
+	//- img.nav__bg(src='/images/navbg.svg')
+	.nav__inner.inner
+		.nav__mobile
+			+button({size: 'xs'}).nav__menu
+				.burger.nav__burger
+					.burger__line
+					.burger__line
+					.burger__line
+			.nav__mobile--text Меню
+		a(href="/")
+			.nav__logo.logo
+				img.logo__pic(src='/images/logopic.png')
+				img.logo__text(src='/images/logotext.png')
+		.nav__content
+			.nav__links
+				-let links = [{link: '/about.html', name: 'о проекте', children: false},{link: '/programs.html', name: 'комплексные программы', children: true},{link: '/trainings.html', name: 'тренировки', children: true},{link: '/courses.html', name: 'курсы', children: false},{link: '/researches.html', name: 'исследования', children: false},{link: '#', name: 'rus', children: true}];
+				each link in links
+					.nav__link(class=`${link.children?'nav__link_children':''} ${link.name=='о проекте'?'active':''}`)
+						+link(link.link).nav__link--link(class=`${link.name=='о проекте'?'active':''}`)= link.name
+						if link.children
+							.nav__link--children(class=link.name!='rus'?'nav__link--children_left':'')
+								each i in range(3)
+									a(href='#').nav__link--child eng
+				a(href='//stearling.net').nav__devs Разработка сайта Stearling Agency
+			a.nav__login: +button личный кабинет
+			a.nav__login.nav__login_mobile: +button({size: 'xs'}): img(src='/images/user.png')

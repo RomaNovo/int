@@ -1,0 +1,55 @@
+.button
+	@include flex(row, center, center, nowrap)
+	text-align: center
+	border-radius: 30px
+	cursor: pointer
+	transition: all 300ms
+	user-select: none
+	&_
+		&white
+			background-color: #ffffff
+			box-shadow: 0 10px 20px rgba(200, 235, 253, 0.4)
+			color: #38d082
+			&:hover
+				box-shadow: 0 20px 30px rgba(200, 235, 253, 0.4)
+			&:active
+				background-color: #ccffcc
+				box-shadow: 0 10px 20px rgba(200, 235, 253, 0.4)
+		&green
+			background-color: #38d082
+			box-shadow: 0 10px 20px rgba(56, 208, 130, 0.3)
+			color: #ffffff
+			&:hover
+				box-shadow: 0 20px 30px rgba(56, 208, 130, 0.2)
+			&:active
+				background-color: #339966
+				box-shadow: 0 10px 20px rgba(56, 208, 130, 0.2)
+		&xs
+			width: 50px
+			height: 50px
+			border-radius: 50%
+		&small
+			width: 210px
+			height: 60px
+		&large
+			width: 270px
+			height: 60px
+	&__
+		&text
+			font-family: $regular
+			font-size: 14px
+			font-weight: 700
+			line-height: 24px
+			text-transform: uppercase
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

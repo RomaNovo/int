@@ -1,0 +1,57 @@
+.home
+	&__
+		&benefits
+			margin: 50px 0
+
+.start
+	&__
+		&left
+			@include flex(column, flex-start, center, nowrap)
+			width: 100%
+		&headline
+			.headline__content
+				text-align: center
+		&text
+			text-align: center
+			border: none
+			padding: 0
+		&right
+			display: none
+
+.benefits
+	@include flex(column, flex-start, center, nowrap)
+	width: 100%
+	max-width: 930px
+	margin: 0 auto
+	&__
+		&line
+			@include flex(column, flex-start, center, nowrap)
+			width: 100%
+			&:nth-child(2n)
+				flex-direction: column
+			&:not(:last-child)
+				margin-bottom: 50px
+		&cell
+			@include flex(column, center, center, nowrap)
+			width: 100%
+			&_
+				&end
+					align-items: center
+			&:first-child
+				margin-bottom: 30px
+		&text
+			text-align: center
+			max-width: 470px
+			margin: 20px 0
+		&button
+			display: none
+			&_
+				&mobile
+					display: flex
+				&smallmargin
+					margin-top: 50px
+		&headline
+			@include flex(column, flex-start, center, nowrap)
+			&__
+				&content
+					text-align: center

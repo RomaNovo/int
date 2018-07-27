@@ -1,0 +1,24 @@
+.bottom
+	@include flex(column, flex-start, center, nowrap)
+	padding: 130px 0
+	&__
+		&text
+			max-width: 680px
+		&buttons
+			margin-top: 60px
+			@include flex(row, center, center, nowrap)
+		&button
+			&:first-child
+				margin-right: 30px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

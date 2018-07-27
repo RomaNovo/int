@@ -1,0 +1,58 @@
+extends ../main/base
+
+block variables
+	-let title = 'Sample';
+
+block content
+	style.
+		.sample{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			width: 60%;
+			margin: 20px auto;
+			//- background-image: linear-gradient(90deg, transparent 10%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.9) 60%, transparent 95%)
+		}
+		.sample > *{
+			margin: 25px 0;
+		}
+	.sample
+		+button() начать тренировку
+		+button({size: 'large'}) начать тренировку
+		+button({color: 'green'}) узнать больше
+		+button({color: 'green', size: 'large'}) узнать больше
+		+switch()#age
+		+link().active о проекте
+		+link() комплексные программы
+		+quote.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.
+		+headline().
+			Работайте эффективнее
+		+headline({sub: 'Мышление'}).
+			Работайте эффективнее
+		+headline({sub: 'Мышление', align: 'center'}).
+			Работайте эффективнее
+		+headline({size: 'large'}).
+			Работайте эффективнее
+		+text().
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.
+		+text({line: true}).
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.
+		+text({align: 'left'}).
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.
+		+ball()
+		+ball({size: 'l'})
+		+ball({size: 'xl', color: 'green'})

@@ -1,0 +1,59 @@
+.benefits
+	.benefits__line
+		.benefits__cell
+			+headline({sub: 'Мышление'}).benefits__headline Работайте эффективнее
+			+text({align: 'left'}).benefits__text Разнообразие, регулярность, последовательное усложнение, комплексное воздействие и планомерная поэтапность — научный путь развития мыслительной деятельности и креативности.
+			+button.benefits__button начать тренировку
+		.benefits__cell.benefits__cell_end
+			.benefits__plans.plans
+				.plans__head Задачи на сегодня
+				.plans__body
+					each i in range(5)
+						.plans__line(class=!i?'plans__line_active':'')
+							.plans__check: img(src='/images/bcheck.png')
+							.plans__info
+								.plans__name Написать отчет по сделкам
+								.plans__date 25.05.2018
+							img.plans__pic(src='/images/suser.png')
+				.plans__bottom: .plans__button Создать задачу
+			+button.benefits__button.benefits__button_mobile.benefits__button_smallmargin начать тренировку
+	.benefits__line
+		.benefits__cell
+			+headline({sub: 'Память'}).benefits__headline Помните всё
+			+text({align: 'left'}).benefits__text Разнообразие, регулярность, последовательное усложнение, комплексное воздействие и планомерная поэтапность — научный путь развития мыслительной деятельности и креативности.
+			+button.benefits__button начать тренировку
+		.benefits__cell
+			.benefits__calendar.bcalendar
+				img.bcalendar__photo.shaking(src='/images/bc1.png')
+				img.bcalendar__photo.shaking(src='/images/bc2.png')
+				img.bcalendar__photo.shaking(src='/images/bc3.png')
+				img.bcalendar__calendar(src='/images/calendar.png')
+			+button.benefits__button.benefits__button_mobile начать тренировку
+	.benefits__line
+		.benefits__cell
+			+headline({sub: 'Внимание'}).benefits__headline Станьте организованнее
+			+text({align: 'left'}).benefits__text Разнообразие, регулярность, последовательное усложнение, комплексное воздействие и планомерная поэтапность — научный путь развития мыслительной деятельности и креативности.
+			+button.benefits__button начать тренировку
+		.benefits__cell.benefits__cell_end
+			.benefits__attention.attention
+				.attention__column
+					.attention__item
+						img.attention__image.shaking(src='/images/bn1.png')
+						.attention__info.attention__info_first
+							img.attention__arrow(src='/images/arrow.png')
+							.attention__info--date 20.02
+							.attention__info--text Написать список продуктов
+				.attention__column
+					.attention__item
+						img.attention__image.shaking(src='/images/bn2.png')
+						.attention__info.attention__info_second
+							.attention__info--date 25.06
+							.attention__info--text Не забыть ключи 
+							img.attention__arrow.attention__arrow_reverse(src='/images/arrow.png')
+					.attention__item
+						img.attention__image.shaking(src='/images/bn3.png')
+						.attention__info.attention__info_third
+							img.attention__arrow(src='/images/arrow2.png')
+							.attention__info--date 10.11
+							.attention__info--text Встретиться с Яной
+			+button.benefits__button.benefits__button_mobile.benefits__button_smallmargin начать тренировку

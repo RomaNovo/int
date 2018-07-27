@@ -1,0 +1,17 @@
+.logo
+	@include flex(row, flex-start, center, nowrap)
+	&__
+		&text
+			margin-left: 10px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

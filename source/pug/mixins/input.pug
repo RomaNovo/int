@@ -1,0 +1,6 @@
+mixin input(obj={})
+	-let props = Object.assign({icon: false, attrs: {type: 'text'}}, obj)
+	.input&attributes(attributes)
+		input.input__field(class={input__field_noicon: !props.icon})&attributes(props.attrs)
+		if props.icon
+			img.input__icon(src=props.icon)

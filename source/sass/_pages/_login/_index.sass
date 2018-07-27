@@ -1,0 +1,58 @@
+.login
+	@include flex(column, center, center, nowrap)
+	width: 100%
+	min-height: 100vh
+	padding-top: 100px
+	&__
+		&subheadline
+			color: $text
+			font-family: $regular
+			font-size: 24px
+			font-weight: 400
+			text-align: center
+			margin: 20px 0 15px
+		&text
+			color: $text
+			font-family: $regular
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			text-align: center
+			max-width: 330px
+		&input
+			margin-bottom: 25px
+		&form
+			@include flex(column, flex-start, center, nowrap)
+			margin: 25px 0 35px
+			width: 100%
+			padding: 0 5%
+			max-width: 600px
+			&--
+				&bottom
+					@include flex(row, space-between, center, nowrap)
+					width: 100%
+					padding: 0 35px
+					margin-bottom: 25px
+		&link
+			color: #369dfc
+			font-family: $regular
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+		&social
+			margin-top: 25px
+			&--
+				&button
+					margin: 0 8px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

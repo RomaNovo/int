@@ -1,0 +1,56 @@
+.modal
+	@include flex(column, center, center, nowrap)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	transform: translateY(100%)
+	transition: transform 1s
+	will-change: transform
+	&.active
+		transform: translateY(0%)
+		transition: none
+		.modal
+			&__
+				&body, &close
+					transform: translateY(0)
+					opacity: 1
+	&__
+		&close
+			@include flex(row, flex-start, center, nowrap)
+			position: absolute
+			top: 40px
+			right: 90px
+			cursor: pointer
+			transform: translateY(150px)
+			opacity: 0
+			transition: transform 1s, opacity 1s
+			will-change: transform, opacity
+			&--
+				&text
+					color: #73dea7
+					font-family: $regular
+					font-size: 16px
+					font-weight: 400
+					line-height: 24px
+				&icon
+					margin-left: 10px
+		&body
+			@include flex(column, center, center, nowrap)
+			transform: translateY(150px)
+			opacity: 0
+			transition: transform 1s, opacity 1s
+			will-change: transform, opacity
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

@@ -1,0 +1,10 @@
+.modal.modal-recovery
+	.modal__close
+		.modal__close--text Закрыть
+		img.modal__close--icon(src='/images/close-button.png')
+	.modal__body
+		.recovery
+			.recovery__headline Восстановление пароля
+			.recovery__text Укажите e-mail, который используется для входа на сайт
+			+input({attrs: {type: 'text', placeholder: 'E-mail'}}).recovery__input
+			+button({color: 'green', size: 'large'}) восстановить

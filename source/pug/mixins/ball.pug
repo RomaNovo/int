@@ -1,0 +1,3 @@
+mixin ball(obj={})
+	-let props = Object.assign({size: 'm', color: 'blue'}, obj);
+	.ball(class=`ball_${props.size} ball_${props.color}`)&attributes(attributes)

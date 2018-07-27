@@ -1,0 +1,73 @@
+.about	
+	&__
+		&inner
+			@include flex(column, flex-start, center, nowrap)
+			padding-top: 100px
+
+		&quote
+			margin: 0 auto
+			max-width: 1000px
+
+		&text
+			max-width: 680px
+			margin: 50px auto 80px
+			padding-bottom: 45px
+			position: relative
+
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				width: 65px
+				height: 2px
+				background-color: $green
+		&inform
+			padding-top: 150px
+			padding-bottom: 150px
+
+
+.inform
+	@include flex(row, space-between, center, nowrap)
+	width: 100%
+
+	&_
+		reverse
+		flex-flow: row-reverse
+		
+	&__
+		&left
+			width: 50%
+		&text
+			margin: 40px 0 55px
+			max-width: 500px
+		&right
+			width: 50%
+		&image
+			position: relative
+		
+			&--image
+				min-height: 387px
+				min-width: 387px
+				display: block
+				position: absolute
+				bottom: -1px
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				border: 13px solid #fff
+				border-radius: 50%
+			 	
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

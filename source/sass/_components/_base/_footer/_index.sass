@@ -1,0 +1,25 @@
+.footer
+	background-color: white
+	&__
+		&inner
+			@include flex(row, space-between, center, nowrap)
+			padding: 40px 0
+		&text
+			opacity: 0.5
+			color: #587696
+			font-family: $regular
+			font-size: 14px
+			font-weight: 400
+			line-height: 24px
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

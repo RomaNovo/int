@@ -1,0 +1,62 @@
+.attention
+	@include flex(row, center, center, nowrap)
+	&__
+		&column
+			@include flex(column, flex-start, flex-start, nowrap)
+		&item
+			margin: 5px
+			position: relative
+		&info
+			@include flex(column, flex-start, flex-start, nowrap)
+			position: absolute
+			width: 250px
+			&--
+				&date
+					opacity: 0.5
+					color: #587696
+					font-family: $marker
+					font-size: 14px
+					font-weight: 400
+					line-height: 23.94px
+				&text
+					color: #587696
+					font-family: $marker
+					font-size: 18px
+					font-weight: 400
+					line-height: 23.94px
+			&_
+				&first
+					left: -100px
+					bottom: -50px
+					transform: rotate(5deg)
+					.attention__arrow
+						margin-left: 60px
+				&second
+					transform: rotate(-10deg)
+					top: -65px
+					left: 30px
+					.attention__arrow
+						margin-left: 40px
+				&third
+					transform: rotate(-15deg)
+					bottom: -40px
+					left: 50px
+					.attention__arrow
+						margin-left: -30px
+		&arrow
+			&_
+				&reverse
+					transform: rotate(180deg)
+
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

@@ -1,0 +1,5 @@
+mixin button(obj={})
+	-let props = Object.assign({color: 'white', size: 'small'}, obj);
+	.button(class=`button_${props.color} button_${props.size}`)&attributes(attributes)
+		.button__text
+			block

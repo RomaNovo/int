@@ -1,0 +1,6 @@
+mixin switch(obj={})
+	-let props = Object.assign({first: 'до 30', second: 'после 30'}, obj)
+	.switch&attributes(attributes)
+		.switch__item.active= props.first
+		.switch__item= props.second
+		.switch__move

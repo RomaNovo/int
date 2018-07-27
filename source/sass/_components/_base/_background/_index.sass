@@ -1,0 +1,26 @@
+.background
+	position: fixed
+	top: 0
+	width: 100%
+	height: 100vh
+	z-index: -1
+	&__
+		&ball
+			position: absolute
+			transition: all 10s
+			transition-timing-function: ease-in-out
+			// transition-timing-function: linear
+			will-change: transform
+			opacity: 0.5
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

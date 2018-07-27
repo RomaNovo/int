@@ -1,0 +1,27 @@
+extends ../main/base
+
+block variables
+	-let title = 'News';
+
+block content
+	.news
+		.news__inner.inner
+			.news__start
+				+headline({size:"large"}).news__headline СМИ о нас...
+				-let names = ['Forbes', 'TJournal', 'Meduza', 'TJournal', 'Meduza']
+				each name in names
+					.news__item
+						.news__item--left
+							.news__item--date 2 июля 2018
+							.news__item--head
+							+headline({size:"large"})= name
+							.news__item--content
+							+text({line:true}).
+								Привлечь внимание потребителя к новым или сложным продуктам (финансовые, рекрутинговые
+								услуги, редкие для рынка товары) достаточно сложно. Решением может стать inbound 
+								marketing, или так называемый входящий маркетинг...	
+							.news__item--button
+								+button() читать дальше  >
+						.news__item--right
+							.news__item--image
+								img(src='/images/ni1.png')

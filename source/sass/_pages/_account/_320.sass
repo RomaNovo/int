@@ -1,0 +1,55 @@
+.account
+    &__
+        &inner  
+            @include flex (column-reverse, center, center, nowrap)
+            height: 100%
+            margin-top: 7rem
+        &block
+            &--
+                &left
+                    width: 100%
+                &right
+                    width: 100%
+        &photo
+            img 
+                display: block
+                margin: 0 auto
+                max-width: 100%
+                object-fit: cover
+            .level
+                left: 25%
+                transform: translateX(-25%)
+        &gameinfo
+            margin-top: 2rem
+            text-align: center
+            .progress__wrap
+                margin: 0 auto
+                margin-bottom: .8rem
+            .text
+                    width: 100%
+                    font-size: 17px
+            .neuro
+                .value
+                    font-size: 17px
+                .name
+                    font-size: 17px
+        &name   
+            margin-top: 2rem
+            margin-bottom: 1.5rem
+            .headline__content
+                font-size: 34px
+                width: 70%
+            .headline
+                width: 100%
+        &settings    
+            top: 0
+            right: -20px
+        &info 
+            width: 100%
+            margin-bottom: 3rem
+            .value
+                font-size: 13px
+                width: 64%
+    .button_small
+        margin: 0 auto
+        margin-bottom: 2rem

@@ -1,0 +1,50 @@
+.switch
+	@include flex(row, space-between, center, nowrap)
+	width: 210px
+	height: 60px
+	box-shadow: 0 10px 20px rgba(200, 235, 253, 0.4)
+	border-radius: 30px
+	background-color: #ffffff
+	overflow: hidden
+	position: relative
+	&__
+		&item
+			@include flex(row, center, center, nowrap)
+			width: 50%
+			height: 100%
+			text-align: center
+			color: #38d082
+			font-family: $regular
+			font-size: 12px
+			font-weight: 700
+			line-height: 24px
+			text-transform: uppercase
+			user-select: none
+			z-index: 1
+			transition: color 500ms
+			cursor: pointer
+			&.active
+				color: #ffffff
+		&move
+			width: 100px
+			height: 50px
+			border-radius: 25px
+			background-color: #38d082
+			position: absolute
+			top: 5px
+			left: 5px
+			z-index: 0
+			transition: transform 500ms
+			will-change: transform
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

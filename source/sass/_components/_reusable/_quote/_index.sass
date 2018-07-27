@@ -1,0 +1,26 @@
+.quote
+	@include flex(column, flex-start, center, nowrap)
+	&__
+		&icon
+			color: $green
+			font-family: $regular
+			font-size: 72px
+			font-weight: 700
+		&text
+			color: $text
+			font-family: $regular
+			font-size: 36px
+			font-weight: 700
+			text-align: center
+
+@media screen and (max-width: 1439px)
+	@import '_1280.sass'
+
+@media screen and (max-width: 1280px)
+	@import '_1024.sass'
+
+@media screen and (max-width: 1024px)
+	@import '_768.sass'
+
+@media screen and (max-width: 768px)
+	@import '_320.sass'

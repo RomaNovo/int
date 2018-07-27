@@ -1,0 +1,45 @@
+extends ../main/base
+
+block variables
+	-let title = 'Account page';
+
+block content
+	.account
+		.account__inner.inner
+			.account__block--left
+				.account__name 
+					+headline({size:"large"}) Дарья Гринслипенко 
+						
+						.account__settings
+							img(src="/images/setting.svg")
+				.account__status
+					.headline__sub Премиум аккаунт
+				.account__info 
+					.column
+						.name Возраст:
+						.value 22
+					.column
+						.name E-mail:
+						.value hello.its.me.dariya@gmail.com
+					.column
+						.name Образование:
+						.value Высшее
+				.account__balance
+					.name Мой баланс:
+					.value 245 грн
+				+button({color: 'green'}) пополнить
+			.account__block--right 
+				.account__photo
+					img(src="/images/account__photo.png")
+					.level
+						.value 10
+						.name Уровень
+				.account__gameinfo
+					.neuro
+						.value 62494
+						.name нейронов
+					.progress__wrap
+						.progress
+						.value
+					.text Наберите 63000,что-бы перейти на следующий уровень.
+						

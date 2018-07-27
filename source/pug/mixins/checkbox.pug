@@ -1,0 +1,9 @@
+mixin checkbox(obj={})
+	-let props = Object.assign({attrs: {}}, obj);
+	-let id = Math.random();
+	.checkbox&attributes(attributes)
+		input.checkbox__input(type='checkbox' id=id)&attributes(props.attrs)
+		label.checkbox__label(for=id)
+			.checkbox__square: img.checkbox__check(src='/images/checkbox.png')
+			.checkbox__text
+				block 
